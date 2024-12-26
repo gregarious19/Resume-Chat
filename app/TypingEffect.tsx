@@ -11,7 +11,7 @@ const TypingEffect: React.FC<TypingEffectProps> = ({ text, speed = 50 }) => {
     let index = 0;
     setDisplayedText("");
     const interval = setInterval(() => {
-      setDisplayedText(() => displayedText + text[index]);
+      setDisplayedText((prev) => prev + text[index]);
       index++;
       if (index === text.length - 1) clearInterval(interval);
     }, speed);

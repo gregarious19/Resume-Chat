@@ -9,7 +9,7 @@ const QueryForm = () => {
     e.preventDefault();
     setResponse("Submitting...");
     try {
-      const res = await fetch(`http://127.0.0.1:8000/?query=${query}`, {
+      const res = await fetch(`http://192.168.29.218:8000/?query=${query}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

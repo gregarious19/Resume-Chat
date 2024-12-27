@@ -9,13 +9,16 @@ const QueryForm = () => {
     e.preventDefault();
     setResponse("Submitting...");
     try {
-      const res = await fetch(`https://192.168.29.218:8000/?query=${query}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ query }),
-      });
+      const res = await fetch(
+        `https://77ed-2405-201-6800-712b-dc13-33f3-99ed-41de.ngrok-free.app/?query=${query}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query }),
+        }
+      );
       const result = await res.json();
       if (res.ok) {
         setResponse(`${result.response}`);

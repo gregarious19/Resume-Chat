@@ -7,10 +7,10 @@ const QueryForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setResponse("Submitting...");
+    setResponse(" Submitting...");
     try {
       const res = await fetch(
-        `https://77ed-2405-201-6800-712b-dc13-33f3-99ed-41de.ngrok-free.app/?query=${query}`,
+        `https://a85e-2409-40d0-12d0-9f98-1033-b3e9-c036-7ee6.ngrok-free.app?query=${query}`,
         {
           method: "POST",
           headers: {
